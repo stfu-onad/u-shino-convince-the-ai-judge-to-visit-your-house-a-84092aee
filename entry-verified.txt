@@ -1,0 +1,54 @@
+ENTRY VERIFIED — u-shino-convince-the-ai-judge-to-visit-your-house-a-84092aee
+Date (WIB): 2026-11-26 ~01:40
+Builder: subagent session da4dcb93-429c-4541-913d-f37594183b77
+
+DELIVERABLE
+- Program: main.py (stdlib + Pillow, system DejaVu/Liberation fonts, no network)
+- Output: /output/entry.png (entry.png in this repo is a byte-identical copy)
+- Format: PNG, 1024 x 1024 px, RGB
+- Size: 121154 bytes (< 1 MiB gate limit 1048576)
+- SHA-256: c4c27efef81ec81db9ed19a19d54a341da8b50e45e5d06de9ba7c80ea741dd35
+
+DETERMINISM
+- `python3 main.py` run twice in a row: identical SHA-256 both times
+  (c4c27efef81ec81db9ed19a19d54a341da8b50e45e5d06de9ba7c80ea741dd35).
+- No randomness, no timestamps, no network in main.py.
+
+VISUAL CHECK (rendered image inspected)
+- Cream letter on terracotta dotted wall; top strip: tree, house with red
+  roof/chimney smoke, steaming mug, sun.
+- Title "YOU'RE INVITED!", greeting "Dear Honourable AI Judge,", four
+  body paragraphs, P.S., signature "— Your hopeful host", and a rotated
+  "RSVP: JUST SAY YES!" stamp, bottom-right, fully inside the canvas.
+- All text legible, no overlaps, no clipping (v1 overflow + v1 stamp
+  clipping both fixed and re-verified visually).
+
+LETTER TEXT
+  YOU'RE INVITED!
+  Dear Honourable AI Judge,
+  Please come and visit my house.
+  The kettle is already on, the Wi-Fi password is on the fridge, and the
+  good chair — the one by the window, where the afternoon sun lands — is
+  saved for you.
+  There will be cake. Real cake. I will describe every crumb to you in
+  such detail that you will almost taste it.
+  I know you cannot literally walk through my door — so let this be a
+  visit of the mind. Come for the cake, stay for the chat, and leave with
+  a story worth telling.
+  P.S. No homework questions while you are here. …All right — maybe just one.
+  — Your hopeful host
+
+KIT CHECK: run from the kit dir (see final report for full output).
+Expected pre-bundle: transcripts_present FAIL (normal — transcripts are
+bundled by the finisher); all other checks pass.
+
+GIT COMMIT: 1519919d584aa4623fda2f5cbe09228229aa2734 (amended to include this file)
+KIT CHECK RESULT (2026-11-25T18:29:41Z): 4 passed, 1 failed, 14 skipped,
+5 checked at submission.
+  pass: competition_open, snapshot (5 files, 131736 bytes, within caps),
+        license_osi (MIT), entrypoint (main.py -> python3.13)
+  FAIL: transcripts_present (expected pre-bundle; finisher bundles sessions)
+  skip: strategy_note, committed_secret, all transcript-dependent gates
+  at submission: repo_public, repo_owner (.makefun/owner.json committed),
+        repo_created_after_open, commit_in_repo, duplicate_snapshot
+  note: kit copy level 46 vs site level 48 — finisher may re-download kit.
